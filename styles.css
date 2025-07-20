@@ -1,0 +1,26 @@
+:root {
+  --primary: #0c4a6e;
+  --secondary: #f59e0b;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/backgrounds.jpg) center/cover no-repeat;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.barber-img {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
