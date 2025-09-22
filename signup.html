@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PilyoCut Barbershop - Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 🔥 Global Header -->
+<nav class="bg-white shadow-md">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <div class="flex items-center">
+        <img src="img/barbershop.jpg" alt="PilyoCut Barbershop logo" class="h-10">
+        <span class="ml-2 text-xl font-bold text-gray-800">PilyoCut</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-amber-500">Home</a>
+        <a href="index.html#services" class="text-gray-800 hover:text-amber-500">Services</a>
+        <a href="products.html" class="text-gray-800 hover:text-amber-500">Products</a>
+        <a href="features.html" class="text-gray-800 hover:text-amber-500">Features</a>
+        <a href="signup.html" class="text-gray-800 hover:text-amber-500">Sign Up</a>
+        <a href="contact.html" class="text-gray-800 hover:text-amber-500">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ Paste your Grand Opening promo + signup form + scripts here -->
+
+
+  <!-- 🔥 GRAND OPENING PROMO SECTION -->
+  <section class="bg-amber-500 text-white py-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">🔥 Grand Opening Promo</h2>
+    <p class="mb-6">Sign up today and get 20% off your first haircut!</p>
+    <a href="signup.html"
+       class="bg-white text-amber-600 font-bold px-6 py-3 rounded-full hover:bg-gray-100">
+       Sign Up Now
+    </a>
+  </section>
+
+  <div class="container">
+    <div class="header">
+      <h1>PilyoCut Barbershop</h1>
+      <p>Create your account to book premium grooming services</p>
+    </div>
+
+    <div class="nav">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="content">
+      <!-- Form Section -->
+      <div class="form-section">
+        <h2>Registration Form</h2>
+        
+        <form id="signupForm">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+
+          <div class="form-group">
+            <label>Gender *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="gender" value="Male" required> Male</label>
+              <label><input type="radio" name="gender" value="Female" required> Female</label>
+              <label><input type="radio" name="gender" value="Other" required> Other</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address *</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="contactNumber">Contact Number *</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth *</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username *</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Display Section -->
+      <div class="display-section">
+        <div id="welcomeMessage" class="welcome-message">
+          <h3>Welcome!</h3>
+          <p>Fill out the form to create your account.<br>Your information will appear here after submission.</p>
+        </div>
+
+        <div id="displayContent" class="display-content">
+          <h3>Account Created Successfully!</h3>
+          <div id="userInfo"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-item">
+        <div class="service-title">Haircut</div>
+        <p>Classic and modern haircuts tailored to your style.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-title">Shave</div>
+        <p>Traditional straight razor shaves for a smooth finish.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-title">Beard Trim</div>
+        <p>Expert beard trimming and grooming services.</p>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feel free to 
+         <a href="mailto:info@pilyocut.com">email us</a> or call us at (123) 456-7890.</p>
+    </div>
+
+    <!-- Barber Pole -->
+    <div class="barber-pole"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    const displayContent = document.getElementById('displayContent');
+    const userInfo = document.getElementById('userInfo');
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      let html = '';
+      html += `<div class="info-item"><span class="info-label">First Name:</span> ${formData.get('firstName')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Last Name:</span> ${formData.get('lastName')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Gender:</span> ${formData.get('gender')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Address:</span> ${formData.get('address')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Contact Number:</span> ${formData.get('contactNumber')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Email:</span> ${formData.get('email')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Date of Birth:</span> ${formData.get('dateOfBirth')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Username:</span> ${formData.get('username')}</div>`;
+      html += `<div class="info-item"><span class="info-label">Password:</span> ********</div>`;
+      
+      userInfo.innerHTML = html;
+      welcomeMessage.style.display = 'none';
+      displayContent.classList.add('show');
+      form.reset();
+    });
+
+    // Handle form reset
+    form.addEventListener('reset', function() {
+      displayContent.classList.remove('show');
+      welcomeMessage.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

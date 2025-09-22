@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PilyoCut - Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-gray-50">
+
+  <!-- 🌟 Global Navigation -->
+  <header class="bg-white shadow-md fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <img src="img/barbershop.jpg" alt="PilyoCut Logo" class="h-12 w-12 rounded-full">
+          <span class="ml-3 text-2xl font-bold text-gray-800 tracking-wide">PilyoCut</span>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-lg font-medium">
+          <a href="index.html" class="hover:text-amber-500">Home</a>
+          <a href="index.html#team" class="hover:text-amber-500">Barbers</a>
+          <a href="products.html" class="hover:text-amber-500">Products</a>
+          <a href="features.html" class="hover:text-amber-500">Features</a>
+          <a href="signup.html" class="hover:text-amber-500">Sign Up</a>
+          <a href="contact.html" class="text-amber-500 font-semibold">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✨ Hero Section -->
+  <section class="relative bg-gray-900 text-white pt-32 pb-24 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+      <p class="text-lg md:text-xl text-gray-300">
+        Have a question or want to book an appointment?  
+        Send us a message and we'll get back to you soon.
+      </p>
+    </div>
+  </section>
+
+  <!-- 📧 Contact Form -->
+  <section class="relative -mt-16 max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-8">
+    <form id="contactForm" class="space-y-6">
+      <div>
+        <label class="block mb-1 font-semibold">Full Name</label>
+        <input type="text" name="name" required
+               class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-1 font-semibold">Contact Number</label>
+          <input type="tel" name="phone" required
+                 class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold">Email Address</label>
+          <input type="email" name="email" required
+                 class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+      </div>
+
+      <div>
+        <label class="block mb-1 font-semibold">Your Message</label>
+        <textarea name="message" rows="5" required
+                  class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+      </div>
+
+      <button type="submit"
+              class="w-full bg-amber-500 hover:bg-amber-600 text-white text-lg font-semibold py-3 rounded-lg transition">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-16 py-6 bg-gray-900 text-gray-400 text-center text-sm">
+    © 2025 PilyoCut Barbershop. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>

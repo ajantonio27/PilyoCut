@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PilyoCut - Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-50">
+
+  <!-- 🔥 Global Header (Fixed) -->
+  <nav class="fixed w-full top-0 z-50 bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex items-center">
+          <img src="img/barbershop.jpg" alt="PilyoCut Barbershop logo" class="h-10">
+          <span class="ml-2 text-xl font-bold text-gray-800">PilyoCut</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-800 hover:text-amber-500">Home</a>
+          <a href="index.html#services" class="text-gray-800 hover:text-amber-500">Services</a>
+          <a href="products.html" class="text-gray-800 hover:text-amber-500">Products</a>
+          <a href="features.html" class="text-gray-800 hover:text-amber-500">Features</a>
+          <a href="signup.html" class="text-gray-800 hover:text-amber-500">Sign Up</a>
+          <a href="contact.html" class="text-gray-800 hover:text-amber-500">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Main Content -->
+  <main class="max-w-6xl mx-auto pt-32 pb-12 px-4">
+    <h1 class="text-3xl font-bold text-center mb-8">Our Services</h1>
+
+    <!-- Search -->
+    <div class="flex justify-center mb-6">
+      <input id="search" type="text" placeholder="Search service..."
+             class="border rounded px-4 py-2 w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-amber-500">
+    </div>
+
+    <!-- Products Grid -->
+    <div id="productGrid"
+         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- JS will inject product cards here -->
+    </div>
+  </main>
+
+  <script>
+    const products = [
+      {name:'Classic Cut', price:500, img:'img/adult.png'},
+      {name:'Beard Trim', price:300, img:'img/shave.png'},
+      {name:'Kids Cut', price:300, img:'img/kids.png'},
+      {name:'Hot Towel Shave', price:350, img:'img/hott.png'},
+      {name:'Premium Fade', price:800, img:'img/workbarber.png'},
+      {name:'Beard Design', price:700, img:'img/trimmers.png'},
+      {name:'Facial Massage', price:400, img:'img/tool.png'},
+      {name:'Scalp Treatment', price:600, img:'img/inter.png'},
+      {name:'Hair Spa', price:900, img:'img/happyclie.png'}
+    ];
+
+    const grid = document.getElementById('productGrid');
+    const search = document.getElementById('search');
+
+    function render(list){
+      grid.innerHTML = list.map(p => `
+        <div class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition">
+          <img src="${p.img}" alt="${p.name}" class="w-full h-40 object-cover rounded">
+          <h3 class="mt-4 text-xl font-bold">${p.name}</h3>
+          <p class="text-amber-600 font-semibold">₱${p.price}</p>
+          <div class="flex items-center my-2">
+            <label class="mr-2 text-sm">Rate:</label>
+            <input type="range" min="1" max="5" value="5"
+                   class="w-full accent-amber-500"
+                   oninput="this.nextElementSibling.textContent=this.value+'★'">
+            <span class="ml-2 text-sm">5★</span>
+          </div>
+          <button onclick="alert('${p.name} added!')"
+                  class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded mt-2 w-full">
+            Avail Service
+          </button>
+        </div>
+      `).join('');
+    }
+
+    render(products);
+
+    search.addEventListener('input', () => {
+      const q = search.value.toLowerCase();
+      render(products.filter(p => p.name.toLowerCase().includes(q)));
+    });
+  </script>
+</body>
+</html>
